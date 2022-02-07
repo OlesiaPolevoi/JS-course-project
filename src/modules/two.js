@@ -1,7 +1,7 @@
 "use strict";
 
 const twoJS = () => {
-  const two = "two.js";
+  const two = "hello two";
   console.log(two);
 };
 

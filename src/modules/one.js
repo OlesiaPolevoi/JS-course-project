@@ -1,7 +1,7 @@
 "use strict";
 
 const oneJS = () => {
-  const one = "one.js";
+  const one = "hello module";
   console.log(one);
 };
 
