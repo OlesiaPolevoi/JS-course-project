@@ -1,8 +1,5 @@
 "use strict";
-//entry point
 
-import oneJS from "./modules/one";
-oneJS();
+import modal from "./modules/modal";
 
-import twoJS from "./modules/two";
-twoJS();
+modal();
