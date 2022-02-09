@@ -16,7 +16,17 @@
   \******************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _modules_modal__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules/modal */ \"./modules/modal.js\");\n/* harmony import */ var _modules_slider__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/slider */ \"./modules/slider.js\");\n/* harmony import */ var _modules_carousel__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./modules/carousel */ \"./modules/carousel.js\");\n/* harmony import */ var _modules_services__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./modules/services */ \"./modules/services.js\");\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n(0,_modules_modal__WEBPACK_IMPORTED_MODULE_0__[\"default\"])();\r\n(0,_modules_slider__WEBPACK_IMPORTED_MODULE_1__[\"default\"])();\r\n(0,_modules_carousel__WEBPACK_IMPORTED_MODULE_2__[\"default\"])();\r\n(0,_modules_services__WEBPACK_IMPORTED_MODULE_3__[\"default\"])();\r\n\n\n//# sourceURL=webpack:///./index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _modules_modal__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules/modal */ \"./modules/modal.js\");\n/* harmony import */ var _modules_slider__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/slider */ \"./modules/slider.js\");\n/* harmony import */ var _modules_carousel__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./modules/carousel */ \"./modules/carousel.js\");\n/* harmony import */ var _modules_services__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./modules/services */ \"./modules/services.js\");\n/* harmony import */ var _modules_accordeon__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./modules/accordeon */ \"./modules/accordeon.js\");\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n(0,_modules_modal__WEBPACK_IMPORTED_MODULE_0__[\"default\"])();\r\n(0,_modules_slider__WEBPACK_IMPORTED_MODULE_1__[\"default\"])();\r\n(0,_modules_carousel__WEBPACK_IMPORTED_MODULE_2__[\"default\"])();\r\n(0,_modules_services__WEBPACK_IMPORTED_MODULE_3__[\"default\"])();\r\n(0,_modules_accordeon__WEBPACK_IMPORTED_MODULE_4__[\"default\"])();\r\n\n\n//# sourceURL=webpack:///./index.js?");
+
+/***/ }),
+
+/***/ "./modules/accordeon.js":
+/*!******************************!*\
+  !*** ./modules/accordeon.js ***!
+  \******************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n\n\nconst accordeon = () => {\n  const accordeon = document.querySelector(\".accordeon\");\n  const accordeonElemsTitle = accordeon.querySelectorAll(\".element\");\n  const accordeonContent = accordeon.querySelectorAll(\".element-content\");\n\n  const displayContent = (indx) => {\n    let currentContent = accordeonContent[indx];\n    currentContent.style.display = \"block\";\n\n    accordeonContent.forEach((e, i) => {\n      if (i !== indx) {\n        e.style.display = \"none\";\n      }\n    });\n  };\n\n  accordeonElemsTitle.forEach((e, i) => {\n    e.addEventListener(\"click\", () => {\n      removeActiveClasses();\n      e.classList.add(\"active\");\n      displayContent(i);\n    });\n  });\n\n  const removeActiveClasses = () => {\n    accordeonElemsTitle.forEach((e) => {\n      e.classList.remove(\"active\");\n    });\n  };\n};\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (accordeon);\n\n\n//# sourceURL=webpack:///./modules/accordeon.js?");
 
 /***/ }),
 
@@ -46,7 +56,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
   \*****************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n\n\nconst contactUs = () => {\n  const contactBtn = document.querySelector(\".button-services\");\n  const modalCallback = document.querySelector(\".modal-callback\");\n  const modalOverlay = document.querySelector(\".modal-overlay\");\n\n  contactBtn.addEventListener(\"click\", () => {\n    modalCallback.style.display = \"block\";\n    modalOverlay.style.display = \"block\";\n  });\n};\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (contactUs);\n\n\n//# sourceURL=webpack:///./modules/services.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n\r\n\r\nconst contactUs = () => {\r\n  const contactBtn = document.querySelector(\".button-services\");\r\n  const modalCallback = document.querySelector(\".modal-callback\");\r\n  const modalOverlay = document.querySelector(\".modal-overlay\");\r\n\r\n  contactBtn.addEventListener(\"click\", () => {\r\n    modalCallback.style.display = \"block\";\r\n    modalOverlay.style.display = \"block\";\r\n  });\r\n};\r\n\r\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (contactUs);\r\n\n\n//# sourceURL=webpack:///./modules/services.js?");
 
 /***/ }),
 
