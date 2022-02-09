@@ -5,9 +5,11 @@ import slider from "./modules/slider";
 import carousel from "./modules/carousel";
 import contactUs from "./modules/services";
 import accordeon from "./modules/accordeon";
+import scroll from "./modules/scroll";
 
 modal();
 slider();
 carousel();
 contactUs();
 accordeon();
+scroll();
