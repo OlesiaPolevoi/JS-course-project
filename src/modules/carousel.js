@@ -9,7 +9,6 @@ const carousel = () => {
   const modalOverlay = document.querySelector(".modal-overlay");
 
   let leftDisplayElem = 0;
-
   carouselEl.forEach((e) => {
     e.addEventListener("click", () => {
       modalCallback.style.display = "block";
