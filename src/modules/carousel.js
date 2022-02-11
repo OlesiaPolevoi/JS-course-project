@@ -4,8 +4,18 @@ const carousel = () => {
   const servicesArrow = document.querySelector(".services-arrow");
   const container = document.querySelector(".services-carousel");
   const carouselColumns = document.querySelectorAll(".col-sm-6");
+  const carouselEl = container.querySelectorAll(".absolute");
+  const modalCallback = document.querySelector(".modal-callback");
+  const modalOverlay = document.querySelector(".modal-overlay");
 
   let leftDisplayElem = 0;
+
+  carouselEl.forEach((e) => {
+    e.addEventListener("click", () => {
+      modalCallback.style.display = "block";
+      modalOverlay.style.display = "block";
+    });
+  });
 
   const carouselUpdate = () => {
     container.innerHTML = null;
