@@ -23,6 +23,18 @@ const scroll = () => {
       behavior: "smooth",
     });
   });
+
+  const smoothScroll = (item) => {
+    item.preventDefault();
+    if (item.target.closest("a").getAttribute("href").slice(1)) {
+      const link = document.querySelector(
+        item.target.closest("a").getAttribute("href")
+      );
+      link.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+  };
+  const topMenu = document.querySelector(".top-menu");
+  topMenu.addEventListener("click", smoothScroll);
 };
 
 export default scroll;
