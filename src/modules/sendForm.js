@@ -5,11 +5,13 @@ const form = () => {
   const nameInput = form.querySelector('[name="fio"]');
   const telInput = form.querySelector('[name="tel"]');
 
-  const statusBlock = document.createElement("div");
+  const statusBlock = document.createElement("b");
+
   const loadText = "Идет отправка";
   const errorText = "Ошибка";
   const successText = "Отправлено! Мы скоро с вами свяжемся";
-
+  const modalCallback = document.querySelector(".modal-callback");
+  const modalOverlay = document.querySelector(".modal-overlay");
   const checkInput = () => {
     nameInput.addEventListener("input", (e) => {
       e.target.value = e.target.value.replace(/[^а-яА-я\-\s]/g, "");
@@ -50,6 +52,10 @@ const form = () => {
 
           nameInput.value = "";
           telInput.value = "";
+          setTimeout(() => {
+            modalCallback.style.display = "none";
+            modalOverlay.style.display = "none";
+          }, 600);
         })
         .catch((error) => {
           statusBlock.textContent = errorText;
